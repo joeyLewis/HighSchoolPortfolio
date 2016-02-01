@@ -1,0 +1,96 @@
+Notes on the Chadabase
+
+written in python 2.7.10 - do not use python 3 to compile or run the chadabase
+
+3 parts to the chadabase: model, view, and controller (MVC)
+
+model: contains all of the data handling functions and classes unique to each game
+	as well as basic data structures such as Team, Entry, etc.
+view : contains the code for displaying information from the model
+controller: tells the view which information to display and when to update
+	portals vs windows: at one point I had planed to make the chadabase into a single screen application (instead of the multi-windowed version it is now).  that single screen was going to use portals to determine how it displayed the windowed output into one major window.  if you want to tackle that, go ahead, but all the vital code is in the windows folder
+
+
+so each year the things that need to be updated are:
+	the model	- update the respective names of values within Team, Entry, and Match
+			- update the way scores are calculated under calulate.py
+	the controller  - update the display lists with the new titles used for display
+			- update the display lists with the new names of variables
+
+because this year also has defensive and assistive play, it may be nice to look back at 2014 chadabase code to see how to update the model, view, and controller to display those values as well (in particular, the prediction view and controller, as well as the model code for calculating these scores).  it may be better to use 2014 code as a base for the code this year
+
+how the model works:
+
+	the model takes matches in one ENTRY at a time (each entry represents one data point for the match: i.e. there are six in each match, one for each scouting device / robot)
+	match data is turned into entries from the imports function, which does not need to be changed from year to year (it works dynamically for all data sizes)
+	
+editing ENTRY:
+	the first part of entry is the __init__(self, data): function
+	this is called when an entry is created
+	it makes sense of the line data recorded and parsed from the devices
+		to update: make variable names which make sense according to what each new data point means
+	the second part is the sort, secondary_sort, etc.
+	these calculate data as it becomes available from the calculate function (its kindof confusing and complicated)
+		most of what goes on here is just calculating averages from all of the listed values (things that an entry would have more than one of per match, such as a list of times, in the last game a lot of stack information, etc.)
+
+editing TEAM:
+	team contains a bunch of subclasses which help organize its information
+		in short, TeamInfo contains all of the usual values from each entry for a team
+				TeamScores contains all of the unique sorting scores (such as offensive, auto, container, foul) for a team
+			TeamRankings contains special qualifies to rank teams by specific values (like auto_score, etc.  more on rankings under calculate)
+
+	the big one: the Team's get_details(self) function
+		contains all of the information that you will want to display to the screen.  make things here that you think will be important for the users to get a look at.  this will help you have an idea of what data you need within TeamInfo and TeamScores, because they will be derived from those values to get more sensible and understandable values for the display
+
+editing CALCULATE:
+	the calculate data function use pretty generic, and shouldn't need to be modified too heavily if you go off the 2014 model, or if using the 2015 model will need modifications to calculate defensive and assistive scores (see the 2014 model for how to do these modifications)
+
+	the assign_team_values function takes values from an entry and saves them into a team (usually appending a into list of scores from all matches, etc.)
+
+	the get_rank functions are how rankings are managed
+		they interface with the rankings defined in TeamRankings under team.py
+		see the format of previously defined ranking functions to start defining new ones
+
+	the predict scores function shouldn't need to be modified from the 2014 version (the 2015 version ignores defensive and assistive scores,  use this if you wish to ignore those scores as well)
+
+
+editing CONTROLLERS:
+	each controller doesn't need to be edited much
+		cchoose.py   - needs no edits
+		cpredict.py  - edit the predictIndex to change which values you display for quick view on the prediction screen  these usually include whatever you think is important for knowing how to best use or defend a robot
+			format for each entry in the list: (name_of_attribute, display_value)
+				the name_of_attribute must match EXACTLY the name of the variable in Team that you wish to use (you must use the values under the Team's get_details function)
+				display_value is the text which is displayed as a header for the column on the screen (make it shorthand, but explicit, otherwise the screen becomes too wide)
+		cranking.py  - edit the rankingTypes list to contain strings of the different rankings you wish to offer
+			     - edit the rankingIndex to change how these rankings work
+				format: (rankingType, ranking_function)
+					rankingType: the same string as listed in rankingTypes
+					ranking_function: the function from calculate you want to associate with this ranking (basically, which ranking function you wrote to handle this type of rank)
+		csearch.py   - edit the lists from GenAuto, TelePost, and ItemTypes
+				format of GenAuto list: (team_detail_attribute, display_text)
+				format of telePost list: same as before
+				format of ItemTypes list: same as before
+					the difference in these lists is that GenAuto contains General info or Autonomous information, 
+									      TelePost contains teleop or post-game info, and 
+									      itemTypes contains non-number search options (i.e. they did something or never did something)
+			     - edit the searches dictionary (its below the definitions for searchGreater, searchLess, etc.)
+				format of searches dictionary: "team_detail_attribute":searchFunction,
+					these should match the team_detail_attribute from above (in the lists and in Teams get_details
+					searchFunction should match one of the four above defined searchFunctions (either searchGreater, searchLess, searchHas, or searchNever)
+		cteamdata.py - edit the dataLabelVals list, and maxmimLabelVals
+					format for each list: (team_attribute, display_text)
+						where team_attribute comes from team_details for the dataLabelVals, and from Team.Scores.maxminscores for the maxminLabelVals
+					this list determines which data values from Team are displayed on the Team info tab, and in what order, and with what title)
+			     - edit the graphvals list
+					format for this list: (team_attribute, container, list_to_generate_graph_from)
+						team_attribute: the attribute you want to double click to display the list (must match an attribute from the dataLabelVals list)
+						container: either Scores or Info, says where to get the list_to_generate_graph_from
+						list_to_generate_graph_from: the attribute within either Scores or Info (must be a list) that will be used to create the linear regression graph (usually oScores, autoScores, or some kind of list).  try to include as many of these as possible (i.e. all of the lists within Scores and Info) because this means more information if its wanted, is available
+
+
+that should be all you have to update each year for the Chadabase.  as you work with the code more and become more familiar with it, you will learn quite a lot how it works.  This code is a product of a couple of years of optimization, but I KNOW that more can be done with it.  oh the days when it was all in one massive, uncommented file, and in nothing of the same format as it is now.  This is as simple as I think I can make it sound over text.  If you have any more questions, please feel free to ask.  I hope this provides a good place to start.  Happy coding!
+
+
+
+		
+

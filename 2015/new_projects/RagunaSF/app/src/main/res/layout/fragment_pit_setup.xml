@@ -1,0 +1,39 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vandenrobotics.ragunasf.controllers.pits.PitSetupFragment"
+    android:layout_margin="@dimen/tab_margin">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_PitTeam"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/editText_TeamsHint"
+        android:singleLine="true"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/listView_PitTeams"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/editText_PitTeam"
+        android:layout_above="@+id/button_ViewPitEntry"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/VandenGreen"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_PitEntry"
+        android:id="@+id/button_ViewPitEntry"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/Gold"
+        android:backgroundTint="@color/VandenGreen"/>
+
+
+</RelativeLayout>

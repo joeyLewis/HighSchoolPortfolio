@@ -1,0 +1,10 @@
+<resources>
+
+<!-- Base application theme. -->
+<style name="DefaultTheme" parent="android:Theme.Material">
+    <!-- Customize your theme here. -->
+    <item name="android:colorPrimary">@color/VandenGreen</item>
+    <item name="android:colorAccent">@color/Gold</item>
+</style>
+
+</resources>

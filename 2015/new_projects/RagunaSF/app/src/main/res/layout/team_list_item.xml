@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vandenrobotics.ragunasf.views.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/choice_list_background"
+    android:checkable="true">
+
+    <ImageView
+        android:id="@+id/teamImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/imageView_RobotPicture"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_nopic"
+        android:background="@drawable/layout_border"
+        android:layout_margin="4dp"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@+id/teamImage"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:textAppearanceListItem"
+            android:id="@+id/teamNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/White" />
+
+        <TextView
+            style="?android:textAppearanceListItemSecondary"
+            android:id="@+id/teamNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/White" />
+
+    </LinearLayout>
+
+</com.vandenrobotics.ragunasf.views.CheckableRelativeLayout>

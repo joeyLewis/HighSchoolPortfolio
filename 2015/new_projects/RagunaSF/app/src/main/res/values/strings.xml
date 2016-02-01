@@ -1,0 +1,83 @@
+<resources>
+    <!-- Application Information -->
+    <string name="app_name">Raguna Scouting Framework</string>
+    <string name="app_version">Dev0</string>
+
+    <!-- Activities -->
+
+        <!-- MainActivity -->
+        <string name="actionBarTitle_MainActivity">RagunaSF</string>
+        <string name="textView_Subtitle">For FRC Scouting</string>
+        <string name="textView_Developer">Designed and Developed by\nFIRST Team 701: The RoboVikes</string>
+        <string name="editText_EventsHint">Search for an event</string>
+        <string name="imageView_RoboVikesLogo">Our logo goes here!</string>
+
+        <!-- EventActivity -->
+        <string name="actionBarTitle_EventActivity">Event:</string>
+        <string name="hello_world">Hello, World!</string>
+        <string name="textView_ScoutingButtonsTitle">Scouting Options</string>
+        <string name="imageView_RobotPicture">A robot picture goes here!</string>
+        <string name="editText_TeamsHint">Search for a team</string>
+        <string name="editText_MatchesHint">Match</string>
+
+            <!-- PitSetup -->
+            <string name="tab_PitSetupTitle">PITS</string>
+            <string name="button_PitEntry">View Pit Entry</string>
+
+            <!-- MatchSetup -->
+            <string name="tab_MatchSetupTitle">MATCH</string>
+            <string name="button_StartMatch">Start Match</string>
+
+            <!-- CaptainSetup -->
+            <string name="tab_CaptainSetupTitle">CAPTAIN</string>
+            <string name="button_StartMatchCaptain">Start Match as Captain</string>
+
+
+    <!-- Dialogs -->
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+
+        <!-- ConfirmNavigationDialogFragment -->
+        <string name="dialog_ConfirmNavigationTitle">Confirm Navigation to Website</string>
+
+        <!-- About Dialog -->
+        <string name="dialog_AboutTitle">About RagunaSF Version</string>
+        <string name="dialog_AboutMessage">RagunaSF is designed as a framework for creating custom
+                                           FIRST scouting applications, most commonly for the
+                                           purpose of FRC scouting.  RagunaSF is designed and
+                                           developed by Joe Lewis and Ben Aldrich - FIRST Team 701:
+                                           The RoboVikes.  If you have questions about the app, feel
+                                           free to contact me at \n\n\t\tjoelewis@ucdavis.edu\n\nor
+                                           head to www.vandenrobotics.com for more info about our team. </string>
+
+        <!-- EventProgress Dialog -->
+        <string name="dialog_EventProgressTitle">Downloading Events to the System</string>
+        <string name="dialog_EventProgressMessage">Seeing if any events exist remotely that haven\'t
+                                                   been downloaded yet.  This may take a while&#8230;</string>
+
+
+        <!-- DownloadTeamProgress Dialog -->
+        <string name="dialog_DownloadTeamsProgressTitle">Downloading Event to the System</string>
+        <string name="dialog_DownloadTeamsProgressMessage">Finding the teams for this event.
+                                                           This may take a while&#8230;</string>
+
+        <!-- DownloadMatchProgress Dialog -->
+        <string name="dialog_DownloadMatchesProgressTitle">Downloading Matches to the System</string>
+        <string name="dialog_DownloadMatchesProgressMessage">Finding the matches for this event.
+                                                             This may take a while&#8230;</string>
+
+
+    <!-- Menus -->
+    <string name="action_settings">Settings</string>
+    <string name="action_loadWebsite">Go to our website</string>
+    <string name="action_about">About this app</string>
+
+        <!-- MainMenu -->
+        <string name="action_refreshEvents">Refresh event list</string>
+
+        <!-- EventMenu -->
+        <string name="action_refreshEvent">Refresh event</string>
+    <string name="title_activity_pit_scout">PitScoutActivity</string>
+    <string name="title_activity_match_scout">MatchScoutActivity</string>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:state_pressed="true"
+        android:drawable="@drawable/yellow_tote_check_pressed"
+        android:textColor="@color/Gold"/>
+    <item android:state_pressed="true"
+        android:drawable="@drawable/yellow_tote_pressed"
+        android:textColor="@color/Gray"/>
+    <item android:state_checked="true"
+        android:drawable="@drawable/yellow_tote_check"
+        android:textColor="@color/Gold"/>
+    <item
+        android:drawable="@drawable/yellow_tote_default"
+        android:textColor="@color/Gray"/>
+</selector>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vandenrobotics.functionfirst"
+    android:versionCode="2"
+    android:versionName="2.0.dev" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.vandenrobotics.functionfirst.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vandenrobotics.functionfirst.scout.ScoutActivity"
+            android:label="@string/title_activity_scout"
+            android:screenOrientation="landscape"
+            android:parentActivityName="com.vandenrobotics.functionfirst.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vandenrobotics.functionfirst.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.vandenrobotics.functionfirst.scout.MatchActivity"
+            android:label="@string/title_activity_scout"
+            android:parentActivityName="com.vandenrobotics.functionfirst.scout.ScoutActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vandenrobotics.functionfirst.MainActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
+

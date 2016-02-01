@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context=".ScoutActivity$TeleFragment" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/buttonUndo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:text="@string/button_undo"
+            android:textSize="12sp"
+            android:textColor="@color/Black" />
+
+        <Button
+            android:id="@+id/buttonRedo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:text="@string/button_redo"
+            android:textSize="12sp"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:id="@+id/titleIntakeTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/title_intakeTime"
+            android:textColor="@color/Black" />
+
+        <Button
+            android:id="@+id/buttonRecordIntake"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:text="@string/button_recordStart"
+            android:textSize="12sp"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:id="@+id/title_lowScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.25"
+            android:gravity="end"
+            android:textSize="18sp"
+            android:text="@string/title_lowScore"
+            android:textColor="@color/Black" />
+
+        <Button
+            android:id="@+id/buttonDownLowScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/button_minus"
+            android:textColor="@color/Black" />
+
+        <EditText
+            android:id="@+id/lowScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/buttonUpLowScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/button_plus"
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <Button
+                android:id="@+id/buttonTruss"
+                style="buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_truss" />
+
+            <Button
+                android:id="@+id/buttonCatch"
+                style="buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_catch" />
+
+            <Button
+                android:id="@+id/buttonScore"
+                style="buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_score" />
+
+            <Button
+                android:id="@+id/buttonGiveAssist"
+                style="buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_giveAssist" />
+
+            <Button
+                android:id="@+id/buttonReceiveAssist"
+                style="buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_receiveAssist" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/fieldDiagram"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/descFieldDiagram"
+        android:keepScreenOn="true"
+        android:src="@drawable/field_layout_tele" />
+
+</RelativeLayout>

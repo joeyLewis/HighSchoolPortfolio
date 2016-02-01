@@ -1,0 +1,92 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vandenrobotics.ragunasf.controllers.match.MatchSetupFragment"
+    android:layout_margin="@dimen/tab_margin">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/matchSetupBar">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_Match"
+            android:layout_weight="1"
+            android:hint="@string/editText_MatchesHint"
+            android:singleLine="true"
+            android:layout_marginEnd="4dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_Team"
+            android:layout_weight="3"
+            android:hint="@string/editText_TeamsHint"
+            android:singleLine="true"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/matchSetupBar"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false"
+        android:layout_above="@+id/linearLayout_MatchSetup">
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_Matches"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:listSelector="@color/VandenGreen"
+            android:layout_marginEnd="4dp"/>
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_Teams"
+            android:layout_weight="3"
+            android:choiceMode="singleChoice"
+            android:listSelector="@color/VandenGreen"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_MatchSetup">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/spinner_ScoutingPosition"
+            android:spinnerMode="dropdown"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:text="@string/button_StartMatch"
+            android:id="@+id/button_StartMatch"
+            android:textColor="@color/Gold"
+            android:backgroundTint="@color/VandenGreen"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/White"
+    tools:context=".ScoutActivity$AutoFragment" >
+
+    <CheckBox
+        android:id="@+id/autoHadAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_hadAuto"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/autoHadAuto"
+        android:layout_below="@id/autoHadAuto"
+        android:layout_toLeftOf="@+id/textView2"
+        android:text="@string/title_highScore"
+        android:textColor="@color/Black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:text="@string/title_lowScore"
+        android:textColor="@color/Black"
+        android:textSize="24sp" />
+
+    <NumberPicker
+        android:id="@+id/autoHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView2" />
+    
+    <CheckBox
+        android:id="@+id/autoHighHot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoHighHot1"
+        android:layout_below="@+id/autoHighHot1"
+        android:text="@string/check_autoHot"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/autoLowHot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoLowHot1"
+        android:layout_below="@+id/autoLowHot1"
+        android:text="@string/check_autoHot"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/autoLowHot3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoLowHot2"
+        android:layout_below="@+id/autoLowHot2"
+        android:text="@string/check_autoHot"
+        android:textSize="24sp" />
+
+    <NumberPicker
+        android:id="@+id/autoLowScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/autoHighHot3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoHighHot2"
+        android:layout_below="@+id/autoHighHot2"
+        android:text="@string/check_autoHot"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/autoGoalieZone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/autoMobilityBonus"
+        android:layout_alignBottom="@+id/autoMobilityBonus"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="@string/check_goalieZone"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/autoLowHot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/autoHighHot1"
+        android:layout_alignBottom="@+id/autoHighHot1"
+        android:layout_toRightOf="@+id/autoLowScore"
+        android:text="@string/check_autoHot"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/autoHighHot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/autoHighScore"
+        android:layout_toRightOf="@+id/autoHighScore"
+        android:text="@string/check_autoHot"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/autoMobilityBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoHighScore"
+        android:layout_below="@+id/autoHighScore"
+        android:text="@string/check_mobilityBonus"
+        android:textSize="24sp" />
+
+</RelativeLayout>

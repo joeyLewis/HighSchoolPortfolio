@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".AutoFragment"
+    android:background="@color/DarkGreen"
+    android:id="@+id/layout">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_hadAuto"
+        android:id="@+id/cb_hadAuto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/Gold" />
+
+    <LinearLayout
+        android:id="@+id/autoStackLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ToggleButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleAutoStackTop"
+            android:background="@drawable/yellow_tote_toggle_button"/>
+
+        <ToggleButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleAutoStackMid"
+            android:background="@drawable/yellow_tote_toggle_button" />
+
+        <ToggleButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleAutoStackBase"
+            android:background="@drawable/yellow_tote_toggle_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_autoStack"
+            android:id="@+id/textAutoStack"
+            android:textColor="@color/Gold" />
+
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/pickerViewAuto"
+        android:layout_below="@+id/cb_hadAuto"
+        android:layout_above="@+id/cb_endInAuto"
+        android:layout_toLeftOf="@+id/autoStackLayout"
+        android:layout_toStartOf="@+id/autoStackLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_totesToAuto"
+                    android:id="@+id/textTotesToAuto"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/Gold" />
+
+                <com.vandenrobotics.functionfirst.views.NumberPicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pickerTotesToAuto"
+                    android:layout_below="@+id/textTotesToAuto"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_containersToAuto"
+                    android:id="@+id/textContainersToAuto"
+                    android:layout_below="@+id/pickerTotesToAuto"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/Gold" />
+
+                <com.vandenrobotics.functionfirst.views.NumberPicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pickerContainersToAuto"
+                    android:layout_below="@+id/textContainersToAuto"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_containersFromStep"
+                    android:id="@+id/textContainersFromStep"
+                    android:layout_below="@+id/pickerContainersToAuto"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/Gold" />
+
+                <com.vandenrobotics.functionfirst.views.NumberPicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pickerContainersFromStep"
+                    android:layout_below="@+id/textContainersFromStep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_totesFromStep"
+                    android:id="@+id/textTotesFromStep"
+                    android:layout_below="@+id/pickerContainersFromStep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/Gold" />
+
+                <com.vandenrobotics.functionfirst.views.NumberPicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pickerTotesFromStep"
+                    android:layout_below="@+id/textTotesFromStep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_endInAuto"
+        android:id="@+id/cb_endInAuto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/cb_hadOther"
+        android:textColor="@color/Gold" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_hadOther"
+        android:id="@+id/cb_hadOther"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/Gold" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.vandenrobotics.ragunasf.controllers.MainActivity"
+    style="@style/DefaultTheme">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_Events"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/editText_EventsHint"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_Events"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/editText_Events"
+        android:layout_above="@+id/textView_Subtitle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/textView_Subtitle"
+        android:id="@+id/textView_Subtitle"
+        android:textStyle="bold"
+        android:textColor="@color/Gold"
+        android:layout_above="@+id/textView_Developer"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/textView_Developer"
+        android:id="@+id/textView_Developer"
+        android:textStyle="italic"
+        android:gravity="center_horizontal"
+        android:textColor="@color/Gold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

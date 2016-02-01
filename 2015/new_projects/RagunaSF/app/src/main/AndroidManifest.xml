@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vandenrobotics.ragunasf" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/robovikes_logo"
+        android:label="@string/app_name"
+        android:theme="@style/DefaultTheme" >
+        <activity
+            android:name=".controllers.MainActivity"
+            android:icon="@mipmap/robovikes_logo"
+            android:label="@string/actionBarTitle_MainActivity"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controllers.EventActivity"
+            android:label="@string/actionBarTitle_EventActivity"
+            android:parentActivityName=".controllers.MainActivity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".controllers.pits.PitScoutActivity"
+            android:label="@string/title_activity_pit_scout" >
+        </activity>
+        <activity
+            android:name=".controllers.match.MatchScoutActivity"
+            android:label="@string/title_activity_match_scout" >
+        </activity>
+    </application>
+
+</manifest>

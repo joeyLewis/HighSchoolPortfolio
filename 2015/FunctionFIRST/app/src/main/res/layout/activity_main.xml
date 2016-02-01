@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:clickable="true"
+    android:background="@color/DarkGreen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/text_appTitle"
+        android:textColor="@color/Gold"
+        android:textSize="24sp"
+        android:id="@+id/text_appTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:typeface="serif"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_appSubtitle"
+        android:textColor="@color/Gold"
+        android:id="@+id/text_appSubtitle"
+        android:layout_below="@+id/text_appTitle"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        android:textSize="16sp"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/text_developerInfo"
+        android:textColor="@color/Gold"
+        android:id="@+id/text_developerInfo"
+        android:layout_above="@+id/text_appVersion"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/text_appVersion"
+        android:textColor="@color/Gold"
+        android:id="@+id/text_appVersion"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button_layout_home">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_scout"
+            android:textColor="@color/Gold"
+            android:id="@+id/button_scout"
+            android:layout_weight="1"
+            android:onClick="activityEventList"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_about"
+            android:textColor="@color/Gold"
+            android:id="@+id/button_about"
+            android:layout_weight="1"
+            android:onClick="messageAbout"/>
+    </LinearLayout>
+</RelativeLayout>

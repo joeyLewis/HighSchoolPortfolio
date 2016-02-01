@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.vandenrobotics.ragunasf.controllers.MainActivity">
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:orderInCategory="100"
+          android:showAsAction="never"/>
+    <item android:id="@+id/action_refreshEvents"
+          android:title="@string/action_refreshEvents"
+          android:icon="@drawable/icon_action_refresh"
+          android:orderInCategory="1"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_loadWebsite"
+          android:title="@string/action_loadWebsite"
+          android:orderInCategory="99"
+          android:showAsAction="never" />
+    <item android:id="@+id/action_about"
+          android:title="@string/action_about"
+          android:orderInCategory="98"
+          android:showAsAction="never" />
+</menu>

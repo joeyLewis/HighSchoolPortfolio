@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Function FIRST</string>
+    <string name="button_scout">SCOUT</string>
+    <string name="button_about">ABOUT APP</string>
+    <string name="text_appTitle">FUNCTION FIRST</string>
+    <string name="text_appSubtitle">For the 2015 FRC Season: Recycle Rush</string>
+
+    <string name="text_appVersion">Deployment Version 2</string>
+    <string name="text_developerInfo">Designed by FIRST Team 701</string>
+
+    <string name="text_tbaEventListTitle">2015 FRC Events</string>
+    <string name="text_downloadEventListTitle">Downloaded Events</string>
+
+    <string name="text_titleAbout">ABOUT FUNCTION FIRST</string>
+    <string name="text_messageAbout">Function FIRST is an electronic FRC scouting application designed
+        to analyze real statistical data on teams as they compete.  This version is designed for use with
+        the 2015 FRC Season: Recycle Rush. \nDesigned by Joseph A. Lewis - FIRST Team 701 </string>
+
+    <string name="title_activity_event_list">Choose a FRC Event</string>
+    <string name="text_titleConfirmDelete">Delete Event Data?</string>
+    <string name="text_messageConfirmDelete">This will remove all event data from this device, including collected
+        scouting data.  Are you sure you want to proceed?</string>
+    <string name="text_titleAlreadyDownloaded">Event Already Downloaded</string>
+    <string name="text_messageAlreadyDownloaded">This event already has existing data.  To reset all data,
+        first delete this file from the downloaded list and then re-download the event.</string>
+    <string name="text_titleProgress">Please wait&#8230;</string>
+    <string name="text_messageProgressEventList">Accessing Event Lists&#8230;</string>
+    <string name="text_messageProgressDownload">Downloading Event Data&#8230;</string>
+    <string name="text_titleNoInternet">Turn on Internet Connection</string>
+    <string name="text_messageNoInternet">Please turn on the internet connection to download an event.</string>
+
+    <string name="title_activity_scout">ScoutActivity</string>
+    <string name="text_ScoutInformation">Setup the Next Match</string>
+    <string name="text_promptSpinnerDevice">Select a device to sort your data and auto-load the match and team number to scout from
+        hard copy files that were downloaded when you downloaded the event.</string>
+    <string-array name="deviceOptions">
+        <item>Red 1</item>
+        <item>Red 2</item>
+        <item>Red 3</item>
+        <item>Blue 1</item>
+        <item>Blue 2</item>
+        <item>Blue 3</item>
+    </string-array>
+    <string name="text_promptSpinnerMatch">Select a match that you would like to scout at this event.  Only change
+        this value if you know that you need to go to a specific match (helpful for when matches are replayed or if
+        you introduce a new device to the scouting system in the middle of a competition).</string>
+    <string name="hint_editMatch">Enter a match number.</string>
+    <string name="text_promptSpinnerTeam">Select a team to scout for this match.  Choose from any team at the event,
+        as downloaded from The Blue Alliance when you downloaded the event.  Only change this value if it seems that the
+        matchlist did not downloaded properly or you want to work without it.</string>
+    <string name="button_startMatch">Start Match</string>
+
+    <string name="title_activity_match">MatchActivity</string>
+    <string name="title_initTab">Init Info</string>
+    <string name="title_autoTab">Autonomous</string>
+    <string name="title_teleTab">Tele-Op</string>
+    <string name="title_postTab">Post Match</string>
+
+    <string name="text_teamNumber">Team #</string>
+    <string name="text_matchNumber">Match #</string>
+    <string name="text_deviceNumber">Device #</string>
+
+    <string name="cb_noShow">No Show</string>
+    <string name="text_titleNoShow">Proceed to Next Match?</string>
+    <string name="text_messageNoShow">Click OK to mark this robot as a no show and continue to the next match.</string>
+
+    <string name="cb_hadAuto">Had Autonomous?</string>
+    <string name="text_totesToAuto">Number of Totes Brought to Auto Zone</string>
+    <string name="text_containersToAuto">Number of Containers Brought to Auto Zone</string>
+    <string name="text_containersKnockedOver">Number of Containers Knocked Over</string>
+    <string name="text_containersFromStep">Number of Containers Taken from Step</string>
+    <string name="text_totesFromLandfill">Number of Totes Taken from Landfill</string>
+    <string name="text_totesFromStep">Number of Totes Taken from the Step</string>
+    <string name="text_totesStacked">Number of Non-Auto Totes Stacked on Scoring Platform</string>
+    <string name="text_autoStack">Auto Stack Constructed</string>
+    <string name="cb_endInAuto">Robot Ends in Auto Zone?</string>
+    <string name="cb_hadOther">Robot had Other Autonomous?</string>
+
+    <string name="text_fieldDescription">FIELD DIAGRAM</string>
+    <string name="text_totesFromChute">Number of Totes Received from Chute</string>
+    <string name="text_litterFromChute">Number of Litter Received by Robot</string>
+    <string name="text_litterToLandfill">Number of Litter Pushed to Landfill</string>
+    <string name="text_containersUpright">Number of Containers Made Upright</string>
+    <string name="text_totesUpright">Number of Totes Made Upright</string>
+    <string name="text_teleStack">Stack Totes Contributed</string>
+    <string name="cb_stackKnockedOver">Knocked Over Stack?</string>
+    <string name="text_coopStack">Coop Totes Contributed</string>
+
+    <string name="text_titleDeleteStack">Delete This Stack?</string>
+    <string name="text_messageDeleteStack">This will delete this stack from the saved data for the match.</string>
+    <string name="text_titleEditStack">Edit Stack</string>
+
+    <string name="text_numFouls">Number of Fouls Incurred by This Robot</string>
+    <string name="cb_gotRedCard">Robot Received Red Card?</string>
+    <string name="cb_gotYellowCard">Robot Received Yellow Card?</string>
+    <string name="cb_wasDisabled">Was Disabled During Match?</string>
+    <string name="button_finish">Finish Match</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+</resources>

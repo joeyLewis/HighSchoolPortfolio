@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Function FIRST</string>
+    <string name="info_version">Development Version 9.23.2014</string>
+    <string name="info_developer">Designed by FIRST Team 701</string>
+    <string name="info_season">For FRC Season 2014: Aerial Assist</string>
+    <string name="info_app">FUNCTION FIRST</string>
+    <string name="button_about">ABOUT APP</string>
+    <string name="button_scout">SCOUT</string>
+    <string name="button_nextMatch">Continue to Next Match</string>
+    <string name="button_undo">UNDO</string>
+    <string name="button_finish">Finish</string>
+    <string name="title_activity_scout">ScoutActivity</string>
+    <string name="title_activity_match">Match</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="team_number">Team to Scout</string>
+    <string name="match_number">Match to Scout</string>
+    <string name="device_number">Device Number</string>
+    <string name="check_hadAuto">Had Auto?</string>
+    <string name="check_autoHot">Hot Score</string><string name="check_mobilityBonus">Obtained Mobility Bonus?</string>
+    <string name="check_goalieZone">Robot Started in Goalie Zone?</string>
+    <string name="check_noShow">No Show?</string>
+    <string name="check_disabled">Disabled During Match?</string>
+    <string name="check_yellowCard">Received Yellow Card?</string>
+    <string name="check_redCard">Received Red Card?</string>
+    <string name="check_defensive">Played Defensively?</string>
+    <string name="radio_truss">Truss</string>
+    <string name="radio_catch">Catch</string>
+    <string name="radio_lowGoal">Low Goal</string>
+    <string name="radio_highGoal">High Goal</string><string name="radio_none">None</string>
+    <string name="title_highScore">Number of Balls Scored in High Goals</string>
+    <string name="title_lowScore">Number of Balls Scored in Low Goals</string>
+    <string name="title_hotScore">Number of Balls Scored in Hot Goals</string>
+    <string name="title_cycleGrid">Cycle Number</string>
+    <string name="title_partner">Partner Team #</string>
+    <string name="title_team">Team #</string>
+    <string name="title_regFouls">Number of Regular Fouls Incurred</string>
+    <string name="title_techFouls">Number of Technical Fouls Incurred</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="check_aggressive">Played Aggressively?</string>
+    <string name="button_score">High Goal</string>
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_truss">Truss</string>
+    <string name="button_catch">Catch</string>
+    <string name="button_giveAssist">Gives Assist</string>
+    <string name="button_receiveAssist">Receives Assist</string>
+    <string name="button_redo">REDO</string>
+    <string name="descFieldDiagram">An image of the field to draw hot spots on.</string>
+    <string name="title_intakeTime">Intake Time</string>
+    <string name="button_recordStart">Start Record</string>
+    <string name="button_recordStop">Stop Record</string>
+    <string name="action_go_to_match">Go To Match</string>
+    <string name="action_set_device">Set Device Number</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
